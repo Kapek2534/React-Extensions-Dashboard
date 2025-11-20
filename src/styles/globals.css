@@ -1,0 +1,47 @@
+@import "./theme.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-image: var(--light-gradient);
+  background-repeat: no-repeat;
+  padding: 30px 130px;
+  font-family: var(--font-family-default);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+body::before {
+  background-image: var(--light-gradient);
+  opacity: 1;
+}
+
+body.dark::before {
+  opacity: 0;
+}
+
+body::after {
+  background-image: var(--dark-gradient);
+  opacity: 0;
+}
+
+body.dark::after {
+  opacity: 1;
+}

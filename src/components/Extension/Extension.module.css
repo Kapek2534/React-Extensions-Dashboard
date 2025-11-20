@@ -1,0 +1,134 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -6px rgba(0, 0, 0);
+  background-color: var(--neutral-0);
+  min-height: 180px;
+  transition: 0.3s ease;
+}
+
+.imgTxtContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.txtContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.txtContainer p {
+  font-weight: 300;
+}
+
+.lowerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove {
+  border: none;
+  box-shadow: 0px 0px 10px -6px rgba(0, 0, 0);
+  font-size: 0.9rem;
+  font-family: var(--font-family-default);
+  padding: 8px 15px;
+  background-color: var(--neutral-0);
+  border-radius: 50px;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.remove:hover {
+  background-color: var(--red-70);
+  color: var(--neutral-0);
+  cursor: pointer;
+}
+
+/* *********SWITCH********** */
+
+.switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: var(--neutral-300);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease;
+}
+
+.slider.dark {
+  background-color: var(--neutral-600);
+}
+
+.slider:hover {
+  background-color: var(--red-70);
+}
+
+.slider:before {
+  background-color: var(--neutral-0);
+  bottom: 2px;
+  content: "";
+  height: 15px;
+  left: 2px;
+  position: absolute;
+  transition: 0.3s ease;
+  width: 15px;
+}
+
+.checkbox:checked + .slider {
+  background-color: var(--red-50);
+}
+
+.checkbox:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+.checkbox:checked + .slider:hover {
+  background-color: var(--red-70);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* DARK MODE */
+
+.card.dark {
+  background-color: var(--neutral-800);
+  color: var(--neutral-0);
+  box-shadow: 0px 0px 1.5px 0px rgba(255, 255, 255);
+}
+
+.remove.dark {
+  background-color: var(--neutral-800);
+  box-shadow: 0px 0px 1.5px 0px rgba(255, 255, 255);
+  color: var(--neutral-0);
+}
+
+.remove.dark:hover {
+  background-color: var(--red-50);
+  color: var(--neutral-800);
+}
