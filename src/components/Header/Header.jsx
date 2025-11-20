@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
-import logo from "../../assets/images/logo.svg";
-import headerButtonLight from "../../assets/images/icon-moon.svg";
-import headerButtonDark from "../../assets/images/icon-sun.svg";
+import logo from "/images/logo.svg";
+import headerButtonLight from "/images/icon-moon.svg";
+import headerButtonDark from "/images/icon-sun.svg";
 
 import { useTheme } from "../../context/useTheme";
 
